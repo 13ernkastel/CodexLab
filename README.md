@@ -310,6 +310,18 @@ Suggested Codex prompts:
 
 ## Verification
 
+### Automated regression tests
+
+Run the dependency-free service regression suite from the repository root:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The tests use temporary JSON storage, so they do not modify `data/tasks.json`.
+They cover status filtering, case-insensitive title and description search,
+combined filters, completion persistence, and missing task IDs.
+
 Use the commands below after you finish the lab, or ask Codex to run them and summarize the results.
 
 Suggested verification prompt:
